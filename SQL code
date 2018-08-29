@@ -1,0 +1,41 @@
+SELECT 
+	Date,
+	ZIP,
+	MAX(MaxTemperatureF) MaxTemp
+FROM 
+    weather 
+    
+    
+##################################
+
+
+SELECT 
+	start_station,
+	COUNT(*) trips_started
+FROM 
+    trips 
+GROUP BY start_station
+
+
+###################################
+
+
+SELECT 
+	trip_id,
+	start_date,
+	start_station,
+	end_station,
+	MIN(duration) shortest_duration
+FROM 
+    trips
+    
+
+####################################
+
+
+SELECT 
+	end_station,
+	AVG(duration) Duration
+FROM 
+    trips
+GROUP BY end_station
